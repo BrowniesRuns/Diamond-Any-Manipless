@@ -15,7 +15,7 @@
 
 :::card{theme=warning}
 **Before the Run starts**
-- Make sure the console date is set to **01/01/XXXX**
+- Make sure the console date is set to **01/01/XXXX** (Less chance of enounters)
 - Make sure you clear the games save data
 - Time Starts on pressing the button to open the game from the DS Menu
 :::
@@ -47,4 +47,40 @@ Pick :info[**Chimchar**]{color=red} (Middle) as your starter
 :::::::trainer[Wild Encounter]
   :::::pokemon[Starly]
      - Scratch x2-4
+:::::::
+
+- Leave the Lake
+- Check Level 5 stats
+- Talk to Rowan and the start of the route
+- Talk to your mother and get the **running shoes**
+- Go to **Route 201** and go to the right and go to **Sandgem Town**
+
+- Rename **Chimchar**
+- Say Yes to the Pokédex
+- Leave lab as soon as Lucas leaves and have the tutorial
+- Enter Poké Mart
+
+:::card{theme=info}
+**Shop**
+- x10 Potions (v)
+:::
+
+- Head back home and making sure to avoid all grass
+- Talk to your mother
+- Return to **Sandgem Town**
+- Continue North to **Route 202* for the Catching Tutorial
+
+
+:::card{theme=info}
+**Catching Tutorial**
+- ~1 minute long
+- during attack parts mash A+B
+:::
+
+- Continue to Youngster Tristan
+
+
+:::::::trainer[Youngster Tristan]
+  :::::pokemon[Starly]
+     - Leer + Scratch Spam
 :::::::
