@@ -85,7 +85,7 @@ Pick :info[**Chimchar**]{color=red} (Middle) as your starter
 ::damage[Starly's Quick Attack]{source="Chimchar" offensive=false special=false movePower=40 stab=true level=5 opponentLevel=5 opponentStat=10}
 :::::::
 
-- Continue to Lass Natalie
+- Continue East to Lass Natalie
 
 :::::::trainer[Lass Natalie]
   :::::pokemon[Bidoof]
@@ -95,4 +95,13 @@ Pick :info[**Chimchar**]{color=red} (Middle) as your starter
   :::::pokemon[Bidoof]
      - Ember Spam
 ::damage[Bidoof 2 Tackle]{source="Chimchar" offensive=false special=false movePower=35 stab=true level=7 opponentLevel=3 opponentStat=6}
+:::::::
+
+- Continue North to Youngster Logan
+
+:::::::trainer[Youngster Logan]
+  :::::pokemon[Shinx]
+     - Ember Spam
+::damage[Shinx's Tackle (M)]{source="Chimchar" offensive=false special=false movePower=35 stab=false level=7 opponentLevel=5 opponentStat=9}
+::damage[Starly's Quick Attack]{source="Chimchar" offensive=false special=false movePower=40 stab=true level=5 opponentLevel=5 opponentStat=9}
 :::::::
