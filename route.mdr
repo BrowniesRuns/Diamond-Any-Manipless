@@ -7,6 +7,12 @@
 ----
 **Source**: [Original Notes by Lucas_PGLP]([https://www.twitch.tv/Lucas_PGLP](https://docs.google.com/document/d/1FSXZC9ZTfDo9O4VAiPkYbA4m-xuCTRQ51p5IkRwACrQ/edit?usp=sharing))
 
+:::card{theme=info}
+**Extra Info**
+- Always do fight menu's with touch screen as it is a lot faster than using Dpad
+
+:::
+
 :::card{theme=warning}
 **Before the Run starts**
 - Make sure the console date is set to **01/01/XXXX**
@@ -14,8 +20,8 @@
 - Time Starts on pressing the button to open the game from the DS Menu
 :::
 
-### During the Intro
-- Answer 'No Info Needed' (vvv)  
+### During the Intro (hold B mash A)
+- Answer 'No Info Needed' (vv)  
 - Choose **girl**  
 - Name Yourself 'A'
 - Name the rival 'Barry' (v)
@@ -24,5 +30,19 @@
 **Options**
 - Text Speed - **Fast**
 - Battle Scene - **Off**
-*Set mode doesnt matter as we only use 1 Pokémon*
+- *Button Mode - **L=A***
+
+Put the cursor on BAG before closing the menu
 :::
+
+- Leave your room
+- Go to the rivals house
+- Follow him to his room
+- Leave his house and walk north
+- Head West and make your way to the lake
+
+Pick:info[**Chimchar**]{color=red} (Middle) as your starter
+
+:::::::trainer[Wild Starly]
+     - Scratch x2-4
+:::::::
