@@ -10,3 +10,5 @@ This is a .md file made for **Corvimae's Pokémon Ranger Website found [here](ht
 There are 2 ways you can use this file
 
 1. Take the name 'BrowniesRuns/Diamond-Any-Manipless' and put it into the **Load from REPO** section in ranger
+
+<img width="393" height="519" alt="Chimchar" src="https://github.com/user-attachments/assets/0b9b7b03-6d08-4f6e-bc26-06767f8dad4e" /><img width="393" height="519" alt="Chimchar" src="https://github.com/user-attachments/assets/31033146-128e-44b9-99de-83ea1fc890f5" />
