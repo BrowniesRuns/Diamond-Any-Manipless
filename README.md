@@ -11,4 +11,5 @@ There are 2 ways you can use this file
 
 1. Take the name 'BrowniesRuns/Diamond-Any-Manipless' and put it into the **Load from REPO** section in ranger
 
-<img width="393" height="519" alt="Chimchar" src="https://github.com/user-attachments/assets/0b9b7b03-6d08-4f6e-bc26-06767f8dad4e" />
+<img width="548" height="697" alt="0390 - Chimchar" src="https://github.com/user-attachments/assets/c2147fd3-9fae-40a3-8307-73ab800d9655" />
+
