@@ -1,5 +1,4 @@
-# Diamond Any% Manipless Notes Beginner
-<img width="137" height="174.25" alt="0390 - Chimchar" src="https://github.com/user-attachments/assets/c2147fd3-9fae-40a3-8307-73ab800d9655" />  
+# Diamond Any% Manipless Notes Beginner 
 Ranger File by [Brownie (Me)](https://www.twitch.tv/browniesruns)  
 Huge Help from [TheGlitchyGuy](https://www.twitch.tv/theglitchyguy_)  
 Original Notes by [Lucas_PGLP](https://www.twitch.tv/Lucas_PGLP)
@@ -10,7 +9,7 @@ This is a .md file made for **Corvimae's Pokémon Ranger Website found [here](ht
 ## How do I use the file?
 There are 2 ways you can use this file
 
-1. Take the name 'BrowniesRuns/Diamond-Any-Manipless' and put it into the **Load from REPO** section in ranger *(as shown below)*
+> 1. Take the name 'BrowniesRuns/Diamond-Any-Manipless' and put it into the **Load from REPO** section in ranger *(as shown below)*
 <img width="751" height="440" alt="ranger guide" src="https://github.com/user-attachments/assets/f2785b14-50c0-44d4-aa53-eaf351d31ff8" />
 
 
