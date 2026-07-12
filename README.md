@@ -1,5 +1,6 @@
 # Diamond Any% Manipless Notes Beginner
 Ranger File by [Brownie (Me)](https://www.twitch.tv/browniesruns)  
+Huge Help from [TheGlitchyGuy](https://www.twitch.tv/theglitchyguy_)  
 Original Notes by [Lucas_PGLP](https://www.twitch.tv/Lucas_PGLP)
 
 ## What is this?
