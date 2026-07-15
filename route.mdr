@@ -105,3 +105,775 @@ Pick :info[**Chimchar**]{color=red} (Middle) as your starter
 ::damage[Shinx's Tackle (Male Chim)]{source="Chimchar" offensive=false special=false movePower=35 stab=false level=7 opponentLevel=5 opponentStat=9}
 ::damage[Starly's Quick Attack]{source="Chimchar" offensive=false special=false movePower=40 stab=true level=5 opponentLevel=5 opponentStat=9}
 :::::::
+
+
+
+INSERT HERE THE ROUTE INBETWEEN
+
+:::::::trainer[Rival 1]
+::::::pokemon[Starly]
+- Hidden Power
+- Spam Ember
+
+::variable{name="hpStarly" type="select" title="What did Hidden Power do to Starly ?" options='["No Effect", "Not Very Effective", "Neutral", "Super Effective !"]'}
+::::if{source="Chimchar" condition="$hpStarly == 'No Effect'"}
+- You have either Hidden Power Ground(2x Super Effective against every pokemon where used) 
+- or Ghost (Neutral against every pokemon where used)
+::::
+::::::
+
+::::::pokemon[Piplup]
+
+::::if{source="Chimchar" condition="$hpStarly == 'No Effect'"}
+- Spam Hidden Power or Scratch
+- Spam Ember if Growled 2 times(-2 attack)
+::::
+
+:::::if{source="Chimchar" condition="$hpStarly != 'No Effect'"}
+- Hidden Power
+::variable{name="hpPiplup" type="select" title="What did Hidden Power do to Piplup ?" options='["Not Very Effective", "Neutral", "Super Effective !"]'}
+
+:::if{source="Chimchar" condition="$hpStarly == 'Not Very Effective' && $hpPiplup == 'Not Very Effective'"}
+- Enter a valid combination.
+:::
+
+:::if{source="Chimchar" condition="$hpStarly == 'Not Very Effective' && $hpPiplup == 'Neutral'"}
+- You have Hidden Power Bug (Neutral against every pokemon where used)
+- Spam Hidden Power or Scratch
+- Spam Ember if Growled 2 times(-2 attack)
+:::
+
+:::if{source="Chimchar" condition="$hpStarly == 'Not Very Effective' && $hpPiplup == 'Super Effective !'"}
+- You have Hidden Power Grass, which is the best Hidden power you can get since its 4x super effective against Geodude, Onix and 2x effective against Cranidos
+- Effectively making it the fastest by far since you can skip a lot of trainers and EXP.
+- Spam Hidden Power
+- Spam Ember if Growled 2 times(-2 attack)
+:::
+
+:::if{source="Chimchar" condition="$hpStarly == 'Neutral' && $hpPiplup == 'Not Very Effective'"}
+- You have either Hidden Power Fire, Water or Steel
+- Water is right behind Grass as the second best Hidden Power, also being 4x super effective against Geodude, Onix and 2x effective against Cranidos but having a slower Rival fight.
+- Steel is a very good Hidden Power, being 2x super effective against Geodude, Onix and Cranidos
+- Fire on the other hand is the pretty bad Hidden Power, requiring a slow exp route and consuming a lot of Ember PP which are needed later.
+- Spam Scratch
+- Spam Ember if Growled 2 times(-2 attack)
+:::
+
+:::if{source="Chimchar" condition="$hpStarly == 'Neutral' && $hpPiplup == 'Neutral'"}
+- You have either Hidden Power Fighting, Poison, Flying, Psychic, Dragon, Dark.
+- The only good Hidden Power here is fighting. You will know you have it in the next fight.(2x super effective against Geodude, Onix and Cranidos)
+- Spam Hidden Power or Scratch
+- Spam Ember if Growled 2 times(-2 attack)
+:::
+
+:::if{source="Chimchar" condition="$hpStarly == 'Neutral' && $hpPiplup == 'Super Effective !'"}
+- Enter a valid combination.
+:::
+
+:::if{source="Chimchar" condition="$hpStarly == 'Super Effective !' && $hpPiplup == 'Not Very Effective'"}
+- You have a good Hidden Power, Ice.(2x super effective against Geodude and Onix)
+- Spam Scratch
+- Spam Ember if Growled 2 times(-2 attack)
+:::
+
+:::if{source="Chimchar" condition="$hpStarly == 'Super Effective !' && $hpPiplup == 'Neutral'"}
+- You have a bad Hidden Power, Rock.
+- Spam Hidden Power or Scratch
+- Spam Ember if Growled 2 times(-2 attack)
+:::
+
+:::if{source="Chimchar" condition="$hpStarly == 'Super Effective !' && $hpPiplup == 'Super Effective !'"}
+- You have a bad Hidden Power, Electric, but a fast rival fight at least.
+- Spam Hidden Power
+- Spam Ember if Growled 2 times(-2 attack)
+:::
+:::::
+::::::
+:::::::
+
+# SPLIT 4 - ROARK
+
+:::card{theme=info}
+**Route to follow depending on your Hidden Power type:**
+- **Rock / Electric** → Route 2
+- **Fighting / Poison / Flying / Psychic / Dragon / Dark** → Route 8K *(becomes Route 2 if no HP Fighting)*
+- **Fire / Water / Steel** → Route 8K *(becomes Route 2 if HP Fire)*
+- **Ground / Ghost / Bug** → Route 4 OR 5
+- **Ice / Grass** → Route 8
+
+The steps below adapt automatically based on your Hidden Power answers from the Rival fight.
+:::
+
+::::::::::if{source="Chimchar" condition="$hpStarly == 'No Effect'"}
+### Route 4 OR 5
+
+:::card{theme=info}
+**Route 4** if:
+- Stat **Atk ≤ 18**
+- Stat **Sp.Atk ≥ 20** OR **Blaze**
+
+**Route 5** if not in the conditions of Route 4
+:::
+
+::variable{name="route45" type="select" title="Atk ≤ 18 / Sp.Atk ≥ 20 OR Blaze ?" options='["Yes (Route 4)", "No (Route 5)"]'}
+
+::::::::if{source="Chimchar" condition="$route45 == 'Yes (Route 4)'"}
+### Route 4
+
+- Go right then pass above the trees to avoid the **Youngster**
+- Get to the top of the stairs then talk to the **Lass** from above
+
+:::::::trainer[Lass Kaitlin]
+::::::pokemon[Bidoof]
+- Ember (+ Scratch)
+::::::
+::::::pokemon[Starly]
+- Ember
+::::::
+::::::pokemon[Budew]
+- Ember
+::::::
+:::::::
+
+- Continue right
+- Go along the tree on its left side and head back up
+- Enter the cave at the top right
+- Talk directly to the **Hiker** to get **HM06 Rock Smash**
+- Pass behind the 2 trainers in the cave and exit
+- Exit the cave, head towards the **Youngster** at the bottom of the stairs
+- Go east then south towards the mine
+- Go down the 1st room directly
+- Continue down, then go right at the crossing
+- Talk to the **Worker** on the right against the wall
+
+:::::::trainer[Worker Mason]
+::::::pokemon[Machop]
+- 2 Ember (+ Scratch)
+::::::
+:::::::
+
+- Go down then talk to **Roark**
+- Continue left and talk to the **Worker** against the wall
+
+:::::::trainer[Worker Colin]
+::::::pokemon[Geodude]
+- Hidden Power
+::::::
+::::::pokemon[Onix]
+- Hidden Power
+::::::
+:::::::
+
+- Pick up the **Escape Rope** on the left
+
+**Bag**:
+- Potion
+- Escape Rope
+
+- Go back in front of the **Gym** and enter
+- Pass along the left side to avoid the 1st **Youngster**
+- Fight the 2nd **Youngster**
+
+:::::::trainer[Youngster Darius]
+::::::pokemon[Geodude]
+- Hidden Power
+::::::
+::::::pokemon[Onix]
+- Hidden Power
+::::::
+:::::::
+
+:::card{theme=warning}
+**[EVOLUTION]**
+- Learn **Mach Punch** over **Scratch** (Slot 1 - Spam A)
+:::
+
+**Bag**: Heal Full
+
+- Talk to **Roark**
+::::::::
+
+::::::::if{source="Chimchar" condition="$route45 == 'No (Route 5)'"}
+### Route 5
+
+- Go right then pass above the trees to avoid the **Youngster**
+- Get to the top of the stairs and continue right
+- Go along the tree on its left side and head back up
+- Enter the cave at the top right
+- Talk directly to the **Hiker** to get **HM06 Rock Smash**
+- Pass behind the 1st trainer in the cave
+- Continue right and talk to the **Picnicker**
+
+:::::::trainer[Picnicker Diana]
+::::::pokemon[Budew]
+- Ember
+::::::
+::::::pokemon[Psyduck]
+- 2 Scratch
+::::::
+:::::::
+
+- Exit the cave
+- Head towards the **Youngster** at the bottom of the stairs
+- Go east then south towards the mine
+- Go down the 1st room directly
+- Continue down, then go right at the crossing
+- Talk to the **Worker** on the right against the wall
+
+:::::::trainer[Worker Mason]
+::::::pokemon[Machop]
+- 2 Ember (+ Scratch)
+::::::
+:::::::
+
+- Go down then talk to **Roark**
+- Continue left and talk to the **Worker** against the wall
+
+:::::::trainer[Worker Colin]
+::::::pokemon[Geodude]
+- Hidden Power
+::::::
+::::::pokemon[Onix]
+- Hidden Power
+::::::
+:::::::
+
+- Pick up the **Escape Rope** on the left
+
+**Bag**:
+- Potion
+- Escape Rope
+
+- Go back in front of the **Gym** and enter
+- Pass along the left side to avoid the 1st **Youngster**
+- Fight the 2nd **Youngster**
+
+:::::::trainer[Youngster Darius]
+::::::pokemon[Geodude]
+- Hidden Power
+::::::
+::::::pokemon[Onix]
+- Hidden Power
+::::::
+:::::::
+
+:::card{theme=warning}
+**[EVOLUTION]**
+- Learn **Mach Punch** over **Scratch** (Slot 1 - Spam A)
+:::
+
+**Bag**: Heal Full
+
+- Talk to **Roark**
+::::::::
+::::::::::
+
+::::::::::if{source="Chimchar" condition="$hpStarly != 'No Effect'"}
+
+:::::::::if{source="Chimchar" condition="$hpStarly == 'Super Effective !' && $hpPiplup != 'Not Very Effective'"}
+### Route 2
+
+- Go fight the **Youngster** to the right
+
+:::::::trainer[Youngster Dallas]
+::::::pokemon[Kricketot]
+- Hidden Power (+ Ember)
+::::::
+:::::::
+
+- Get to the top of the stairs then talk to the **Lass** from above
+
+:::::::trainer[Lass Kaitlin]
+::::::pokemon[Bidoof]
+- Ember (+ Scratch)
+::::::
+::::::pokemon[Starly]
+- Ember
+::::::
+::::::pokemon[Budew]
+- Ember
+::::::
+:::::::
+
+- Continue right and fight the **Youngster** next to the grass
+
+:::::::trainer[Youngster Sebastian]
+::::::pokemon[Machop]
+- Spam Ember
+::::::
+:::::::
+
+- Enter the cave at the top right
+- Talk directly to the **Hiker** to get **HM06 Rock Smash**
+- Go talk to the bottom **Camper**
+
+:::::::trainer[Camper Curtis]
+::::::pokemon[Shinx]
+- Spam Ember
+::::::
+:::::::
+
+- Continue right and talk to the **Picnicker**
+
+:::::::trainer[Picnicker Diana]
+::::::pokemon[Budew]
+- Ember
+::::::
+::::::pokemon[Psyduck]
+- HP Electric OR 2 Scratch
+::::::
+:::::::
+
+- Exit the cave
+- Head towards the **Youngster** at the bottom of the stairs
+- Go east then south towards the mine
+- Go down the 1st room directly
+- Continue down, then go left at the crossing
+- Pick up the **Escape Rope** at the bottom
+- Talk to the **Worker** against the wall
+
+:::::::trainer[Worker Colin]
+::::::pokemon[Geodude]
+- Spam Ember OR neutral HP
+::::::
+::::::pokemon[Onix]
+- Spam Ember OR neutral HP
+::::::
+:::::::
+
+:::card{theme=warning}
+**[EVOLUTION]**
+- Learn **Mach Punch** over **Scratch** (Slot 1 - Spam A)
+:::
+
+- Go talk to **Roark** on the right
+
+**Bag**:
+- Potion
+- Escape Rope
+
+- Go back in front of the **Gym** and enter
+- Pass along the sides to avoid the trainers
+
+**Bag**: Heal Full
+
+- Talk to **Roark**
+:::::::::
+
+:::::::::if{source="Chimchar" condition="$hpStarly == 'Neutral'"}
+### Route 8K
+
+- Go fight the **Youngster** to the right
+
+:::::::trainer[Youngster Dallas]
+::::::pokemon[Kricketot]
+- Hidden Power (+ Ember)
+::variable{name="hpKricketot" type="select" title="What did Hidden Power do to Kricketot ?" options='["Not Very Effective", "Neutral", "Super Effective !"]'}
+::::::
+:::::::
+
+::::::::if{source="Chimchar" condition="$hpPiplup == 'Neutral' && $hpKricketot == 'Neutral' || $hpPiplup == 'Neutral' && $hpKricketot == 'Super Effective !'"}
+:::card{theme=warning}
+No **HP Fighting** (it would have been *not very effective*) → **shift to Route 2** (follow the steps below)
+:::
+::::::::
+
+::::::::if{source="Chimchar" condition="$hpPiplup == 'Not Very Effective' && $hpKricketot == 'Super Effective !'"}
+:::card{theme=warning}
+You have **HP Fire** (*super effective*) → **shift to Route 2** (follow the steps below)
+:::
+::::::::
+
+::::::::if{source="Chimchar" condition="$hpPiplup == 'Neutral' && $hpKricketot == 'Neutral' || $hpPiplup == 'Neutral' && $hpKricketot == 'Super Effective !' || $hpPiplup == 'Not Very Effective' && $hpKricketot == 'Super Effective !'"}
+### Route 2
+
+- Get to the top of the stairs then talk to the **Lass** from above
+
+:::::::trainer[Lass Kaitlin]
+::::::pokemon[Bidoof]
+- Ember (+ Scratch)
+::::::
+::::::pokemon[Starly]
+- Ember
+::::::
+::::::pokemon[Budew]
+- Ember
+::::::
+:::::::
+
+- Continue right and fight the **Youngster** next to the grass
+
+:::::::trainer[Youngster Sebastian]
+::::::pokemon[Machop]
+- Spam Ember
+::::::
+:::::::
+
+- Enter the cave at the top right
+- Talk directly to the **Hiker** to get **HM06 Rock Smash**
+- Go talk to the bottom **Camper**
+
+:::::::trainer[Camper Curtis]
+::::::pokemon[Shinx]
+- Spam Ember
+::::::
+:::::::
+
+- Continue right and talk to the **Picnicker**
+
+:::::::trainer[Picnicker Diana]
+::::::pokemon[Budew]
+- Ember
+::::::
+::::::pokemon[Psyduck]
+- HP Electric OR 2 Scratch
+::::::
+:::::::
+
+- Exit the cave
+- Head towards the **Youngster** at the bottom of the stairs
+- Go east then south towards the mine
+- Go down the 1st room directly
+- Continue down, then go left at the crossing
+- Pick up the **Escape Rope** at the bottom
+- Talk to the **Worker** against the wall
+
+:::::::trainer[Worker Colin]
+::::::pokemon[Geodude]
+- Spam Ember OR neutral HP
+::::::
+::::::pokemon[Onix]
+- Spam Ember OR neutral HP
+::::::
+:::::::
+
+:::card{theme=warning}
+**[EVOLUTION]**
+- Learn **Mach Punch** over **Scratch** (Slot 1 - Spam A)
+:::
+
+- Go talk to **Roark** on the right
+
+**Bag**:
+- Potion
+- Escape Rope
+
+- Go back in front of the **Gym** and enter
+- Pass along the sides to avoid the trainers
+
+**Bag**: Heal Full
+
+- Talk to **Roark**
+::::::::
+
+::::::::if{source="Chimchar" condition="$hpPiplup == 'Neutral' && $hpKricketot == 'Not Very Effective' || $hpPiplup == 'Not Very Effective' && $hpKricketot == 'Not Very Effective' || $hpPiplup == 'Not Very Effective' && $hpKricketot == 'Neutral'"}
+- Get to the top of the stairs and continue right
+- Go along the tree on its left side and head back up
+- Enter the cave at the top right
+- Talk directly to the **Hiker** to get **HM06 Rock Smash**
+
+:::card{theme=warning}
+**From here:**
+If you encounter a wild **Geodude lvl 5+** OR a wild **Onix** → **KO it**
+:::
+
+- Pass behind the 2 trainers in the cave and exit
+- Exit the cave, head towards the **Youngster** at the bottom of the stairs
+- Go east then south towards the mine
+- Go down the 1st room directly
+- Continue down, then go right at the crossing
+- Talk to the **Worker** on the right against the wall
+
+*(Skip if you KO'd a Geodude lvl 5+ OR a wild Onix)*
+
+:::::::trainer[Worker Mason]
+::::::pokemon[Machop]
+- 2 Ember (+ Scratch)
+::::::
+:::::::
+
+- Go down then talk to **Roark**
+- Continue left and talk to the **Worker** against the wall
+
+:::::::trainer[Worker Colin]
+::::::pokemon[Geodude]
+- Hidden Power
+::::::
+::::::pokemon[Onix]
+- Hidden Power
+::::::
+:::::::
+
+- Pick up the **Escape Rope** on the left
+
+**Bag**:
+- Potion
+- Escape Rope
+
+- Go back in front of the **Gym** and enter
+- Talk to the 1st **Youngster**
+
+*(Skip if you KO'd a Geodude lvl 6+ OR a wild Onix AND if the 1st Worker was fought in the mine)*
+
+:::::::trainer[Youngster Jonathon]
+::::::pokemon[Geodude]
+- Hidden Power
+::::::
+:::::::
+
+- Fight the 2nd **Youngster**
+
+:::::::trainer[Youngster Darius]
+::::::pokemon[Geodude]
+- Hidden Power
+::::::
+::::::pokemon[Onix]
+- Hidden Power
+::::::
+:::::::
+
+:::card{theme=warning}
+**[EVOLUTION]**
+- Learn **Mach Punch** over **Scratch** (Slot 1 - Spam A)
+:::
+
+**Bag**: Heal Full
+
+- Talk to **Roark**
+::::::::
+:::::::::
+
+:::::::::if{source="Chimchar" condition="$hpStarly == 'Not Very Effective' && $hpPiplup == 'Neutral'"}
+### Route 4 OR 5
+
+:::card{theme=info}
+**Route 4** if:
+- Stat **Atk ≤ 18**
+- Stat **Sp.Atk ≥ 20** OR **Blaze**
+
+**Route 5** if not in the conditions of Route 4
+:::
+
+::variable{name="route45Bug" type="select" title="Atk ≤ 18 / Sp.Atk ≥ 20 OR Blaze ?" options='["Yes (Route 4)", "No (Route 5)"]'}
+
+::::::::if{source="Chimchar" condition="$route45Bug == 'Yes (Route 4)'"}
+### Route 4
+
+- Go right then pass above the trees to avoid the **Youngster**
+- Get to the top of the stairs then talk to the **Lass** from above
+
+:::::::trainer[Lass Kaitlin]
+::::::pokemon[Bidoof]
+- Ember (+ Scratch)
+::::::
+::::::pokemon[Starly]
+- Ember
+::::::
+::::::pokemon[Budew]
+- Ember
+::::::
+:::::::
+
+- Continue right
+- Go along the tree on its left side and head back up
+- Enter the cave at the top right
+- Talk directly to the **Hiker** to get **HM06 Rock Smash**
+- Pass behind the 2 trainers in the cave and exit
+- Exit the cave, head towards the **Youngster** at the bottom of the stairs
+- Go east then south towards the mine
+- Go down the 1st room directly
+- Continue down, then go right at the crossing
+- Talk to the **Worker** on the right against the wall
+
+:::::::trainer[Worker Mason]
+::::::pokemon[Machop]
+- 2 Ember (+ Scratch)
+::::::
+:::::::
+
+- Go down then talk to **Roark**
+- Continue left and talk to the **Worker** against the wall
+
+:::::::trainer[Worker Colin]
+::::::pokemon[Geodude]
+- Hidden Power
+::::::
+::::::pokemon[Onix]
+- Hidden Power
+::::::
+:::::::
+
+- Pick up the **Escape Rope** on the left
+
+**Bag**:
+- Potion
+- Escape Rope
+
+- Go back in front of the **Gym** and enter
+- Pass along the left side to avoid the 1st **Youngster**
+- Fight the 2nd **Youngster**
+
+:::::::trainer[Youngster Darius]
+::::::pokemon[Geodude]
+- Hidden Power
+::::::
+::::::pokemon[Onix]
+- Hidden Power
+::::::
+:::::::
+
+:::card{theme=warning}
+**[EVOLUTION]**
+- Learn **Mach Punch** over **Scratch** (Slot 1 - Spam A)
+:::
+
+**Bag**: Heal Full
+
+- Talk to **Roark**
+::::::::
+
+::::::::if{source="Chimchar" condition="$route45Bug == 'No (Route 5)'"}
+### Route 5
+
+- Go right then pass above the trees to avoid the **Youngster**
+- Get to the top of the stairs and continue right
+- Go along the tree on its left side and head back up
+- Enter the cave at the top right
+- Talk directly to the **Hiker** to get **HM06 Rock Smash**
+- Pass behind the 1st trainer in the cave
+- Continue right and talk to the **Picnicker**
+
+:::::::trainer[Picnicker Diana]
+::::::pokemon[Budew]
+- Ember
+::::::
+::::::pokemon[Psyduck]
+- 2 Scratch
+::::::
+:::::::
+
+- Exit the cave
+- Head towards the **Youngster** at the bottom of the stairs
+- Go east then south towards the mine
+- Go down the 1st room directly
+- Continue down, then go right at the crossing
+- Talk to the **Worker** on the right against the wall
+
+:::::::trainer[Worker Mason]
+::::::pokemon[Machop]
+- 2 Ember (+ Scratch)
+::::::
+:::::::
+
+- Go down then talk to **Roark**
+- Continue left and talk to the **Worker** against the wall
+
+:::::::trainer[Worker Colin]
+::::::pokemon[Geodude]
+- Hidden Power
+::::::
+::::::pokemon[Onix]
+- Hidden Power
+::::::
+:::::::
+
+- Pick up the **Escape Rope** on the left
+
+**Bag**:
+- Potion
+- Escape Rope
+
+- Go back in front of the **Gym** and enter
+- Pass along the left side to avoid the 1st **Youngster**
+- Fight the 2nd **Youngster**
+
+:::::::trainer[Youngster Darius]
+::::::pokemon[Geodude]
+- Hidden Power
+::::::
+::::::pokemon[Onix]
+- Hidden Power
+::::::
+:::::::
+
+:::card{theme=warning}
+**[EVOLUTION]**
+- Learn **Mach Punch** over **Scratch** (Slot 1 - Spam A)
+:::
+
+**Bag**: Heal Full
+
+- Talk to **Roark**
+::::::::
+:::::::::
+
+:::::::::if{source="Chimchar" condition="$hpStarly == 'Super Effective !' && $hpPiplup == 'Not Very Effective' || $hpStarly == 'Not Very Effective' && $hpPiplup == 'Super Effective !'"}
+### Route 8
+
+- Go right then pass above the trees to avoid the **Youngster**
+- Get to the top of the stairs and continue right
+- Go along the tree on its left side and head back up
+- Enter the cave at the top right
+- Talk directly to the **Hiker** to get **HM06 Rock Smash**
+- Pass behind the 2 trainers in the cave and exit
+- Exit the cave, head towards the **Youngster** at the bottom of the stairs
+- Go east then south towards the mine
+- Go down the 1st room directly
+- Continue down, then go right at the crossing
+- Talk to the **Worker** on the right against the wall
+
+:::::::trainer[Worker Mason]
+::::::pokemon[Machop]
+- 2 Ember (+ Scratch)
+::::::
+:::::::
+
+- Go down then talk to **Roark**
+- Continue left and talk to the **Worker** against the wall
+
+:::::::trainer[Worker Colin]
+::::::pokemon[Geodude]
+- Hidden Power
+::::::
+::::::pokemon[Onix]
+- Hidden Power
+::::::
+:::::::
+
+- Pick up the **Escape Rope** on the left
+
+**Bag**:
+- Potion
+- Escape Rope
+
+- Go back in front of the **Gym** and enter
+- Talk to the 1st **Youngster**
+
+:::::::trainer[Youngster Jonathon]
+::::::pokemon[Geodude]
+- Hidden Power
+::::::
+:::::::
+
+- Fight the 2nd **Youngster**
+
+:::::::trainer[Youngster Darius]
+::::::pokemon[Geodude]
+- Hidden Power
+::::::
+::::::pokemon[Onix]
+- Hidden Power
+::::::
+:::::::
+
+:::card{theme=warning}
+**[EVOLUTION]**
+- Learn **Mach Punch** over **Scratch** (Slot 1 - Spam A)
+:::
+
+**Bag**: Heal Full
+
+- Talk to **Roark**
+:::::::::
+
+::::::::::
